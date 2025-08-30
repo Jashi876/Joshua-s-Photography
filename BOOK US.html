@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Us - Joshua's Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #f57c00;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    header button:hover {
+      background-color: #e64a19;
+    }
+
+    .contact-form {
+      background-color: #ede7f6;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact-form h2 {
+      color: #4d04fa;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-form input[type="submit"] {
+      background-color: #673ab7;
+      color: white;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #5e35b1;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .contact-form input, .contact-form textarea {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Joshua's Photography</h1>
+    <button onclick="location.href='index.html'">Back to Home</button>
+  </header>
+
+  <section class="contact-form">
+    <h2>Book Us</h2>
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="service">Type of Service needed:</label>
+      <textarea id="service" name="service" rows="4" placeholder="Describe your photography needs..." required></textarea>
+
+      <input type="submit" value="Send">
+    </form>
+    <script>
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+      });
+    </script>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Joshua's Photography. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
